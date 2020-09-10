@@ -53,19 +53,20 @@ go to application class: add @EnableDiscoveryClient
 
 ## Consuming service via Feign interface
 
-Using Eureka through Feign with Ribon 
+Using Eureka through Feign with Ribon make code much simplified. 
 
-Building an interface at the consumption side that matching the inface at the service, by this way you wired across the boundary
+Building an interface at the consumption side;  the matching the service with the inface, then you wired across the boundary between two services. It needs following steps
 
-Add pom dependency: 
-
+(1) Add pom dependency: 
 ````
 spring-cloud-starter-openfeign
 ````
 
-Main application class; @EnableFeignClients
+(2) Main application class; @EnableFeignClients
 
-creating a Fein client interface
+(3) creating a Fein client interface
+
+(4) Uisng interface to consume the service. 
 
 
 
