@@ -12,7 +12,7 @@ Netflix-Eureka provides an fixed point for services to register themselves, and 
 ## Major elements
 
 * Eureka server, a service registry working like a fixed point linking all services. 
-* Eureka client, a Rest service which registers itself at the registry (Eureka Client). 
+* Eureka client, a Rest service which registers itself at the registry (Eureka Server). 
 * A web application, consuming Rest services as a registry-aware client(Spring cloud netflix Feign Client)
 
 ## Eureka-server
@@ -48,7 +48,24 @@ go to application class: add @EnableDiscoveryClient
 * works much like a Config client 
 
 
-
 ## Consuming services with Ribbon
+
+
+## Consuming service via Feign interface
+
+Using Eureka through Feign with Ribon 
+
+Building an interface at the consumption side that matching the inface at the service, by this way you wired across the boundary
+
+Add pom dependency: 
+
+````
+spring-cloud-starter-openfeign
+````
+
+Main application class; @EnableFeignClients
+
+creating a Fein client interface
+
 
 
