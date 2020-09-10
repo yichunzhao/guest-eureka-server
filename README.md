@@ -24,7 +24,9 @@ Boot starter: Spring cloud Discovery and then select Eureka server
 Configuring application properties:  8761 is a default for Eureka server; meanwhile we tell the built-in Eureka client don't register youself as a client, for we works as a sever.  
 
 >server.port = 8761
+
 >eureka.client.register-with-eureka=false
+
 >eureka.client-fetch-registry=false
 
 * It works like a Config Server; 
